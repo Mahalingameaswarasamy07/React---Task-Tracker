@@ -1,0 +1,153 @@
+.task {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #69686b;
+  padding: 2rem;
+  border-radius: 5px;
+  gap: 2rem;
+  /* margin: 0 auto; */
+}
+
+.checkContainer {
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+}
+
+.checkContainer div {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #62c0ff;
+  border-radius: 50%;
+}
+
+.checkContainer svg {
+  width: 100%;
+  height: 100%;
+  color: #62c0ff;
+}
+
+.task p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #fff;
+  margin-right: auto;
+}
+
+p.taskCompleted {
+  color: #ffffff;
+  text-decoration: line-through;
+}
+p.notTaskCompleted {
+  color: #ffffff;
+}
+
+.delBtn {
+  background: none;
+  border: none;
+  color: #dadada;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  /* padding: 10rem 0rem; */
+  width: 100%;
+  /* max-width: 50%; */
+  margin: 0px auto;
+}
+
+.header_count {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  position: relative;
+  top: 0px !important;
+  max-width: 60%;
+  margin: 0 auto;
+  top: 25rem;
+  /* backdrop-filter: blur(2rem); */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  /* padding: 10rem 5rem 0; */
+  z-index: 1;
+}
+
+.header_count div {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: start;
+}
+
+.header_count div p {
+  font-size: 1.8rem;
+  color: #62c0ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.header_count div .completed {
+  font-size: 1.8rem;
+  color: #dadada;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.header_count div span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #1b1b1b;
+  padding: 0.2rem 1rem;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.list {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  justify-content: flex-start; /* Aligns items to the start of the row */
+  gap: 1.4rem; /* Space between items */
+  margin-top: 20rem; /* Space above the list */
+  margin: 0 auto; /* Center the list */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  max-height: 32rem; /* Limit height of list */
+}
+
+.task {
+  flex: 1 1 calc(25% - 1.4rem); /* Each task takes up to 25% of the row minus the gap */
+  max-width: calc(100% - 1.4rem); /* Ensures no task exceeds this width */
+  box-sizing: border-box; /* Includes padding and border in width calculations */
+  flex-grow: 1;
+  display: flex; /* Add this line to make the task a flex container */
+  align-items: center; /* Center the items vertically */
+}
+.task p {
+  flex: 1; /* Allow the task title to grow and shrink as needed */
+  word-break: break-all; /* Break the title if it exceeds the container width */
+  margin: 0; /* Remove the default margin */
+}
+.noTasksContainer{
+  text-align: center;
+  font-size: medium;
+}
+
+.list::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+.list::-webkit-scrollbar-track {
+  background: rgb(49, 52, 88); /* color of the tracking area */
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: rgb(245, 245, 247); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(156, 162, 210); /* creates padding around scroll thumb */
+}
